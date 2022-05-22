@@ -1,0 +1,14 @@
+version: "3"
+services:
+  account-manager:
+    image: repo.com/huma/account-manager:0.0.12
+    container_name: "account-manager"
+    environment:
+      - AUTHENTIQ_ENV=
+      - AUTHENTIQ_PORT=
+      - AUTHENTIQ_ADMIN_USERNAME=
+      - AUTHENTIQ_ADMIN_PASSWORD=
+    expose:
+      - "2000"
+
+    command: npm run start
